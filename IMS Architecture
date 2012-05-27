@@ -1,0 +1,44 @@
+--------------------------------------------------------------------------------------------------------------------
+symbol		definination
+--------------------------------------------------------------------------------------------------------------------
+
+C		[business model, DAL-bean, DAL-hbm,resource bundle,spring config, test cases, config props etc..] 
+--------------------------------------------------------------------------------------------------------------------
+
+
+Project
+	Module(Business Layer [eclipse projects] )
+		Secutiry	(.jar)	[C] 
+		Collection	(.jar)	[C] 
+		Academics	(.jar)	[C] 
+		Core		(.jar)	[C]  
+		DAL		(.jar)	(hibernate[connection settings, caching settings etc..])
+		Utility		(.jar)
+		WS Caller	(.jar)
+		WebApp		(.war)
+
+
+Rules For Development:
+---------------------
+	*-Each module must have 'exposed interface' which will provide module functionality.
+	*-Each module is webserivce (SOA)
+
+
+Project Infrastructure
+-----------------------
+	* Development Environment
+		-JBOSS AS-7
+		-Eclipse(Indigo)
+		-Maven
+		-MYSQL
+		-GIT
+
+
+	* Framework & Technologies
+		-Spring Framework 3
+		-Hibernate 3
+		-JSP/Velocity
+		-JQuery
+		-JDK7
+
+
