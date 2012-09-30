@@ -1,281 +1,795 @@
-CREATE TABLE Academic (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY(id)
-);
 
-CREATE TABLE Academic_Program (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Academic_id INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(id),
-  INDEX Academic_Program_FKIndex2(Academic_id)
-);
+-- -----------------------------------------------------
+-- Table `ims`.`institute`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`institute` (
+  `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL,
+PRIMARY KEY (`id`) );
 
-CREATE TABLE Academic_Program_Course (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Academic_Program_id INTEGER UNSIGNED NOT NULL,
-  Course_id INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(id),
-  INDEX Academic_Course_FKIndex2(Course_id),
-  INDEX Academic_Program_Course_FKIndex2(Academic_Program_id)
-);
 
-CREATE TABLE Business_Data (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Business_Data_Reference_id INTEGER UNSIGNED NOT NULL,
-  User_Role_Screen_Element_id INTEGER UNSIGNED NOT NULL,
-  value1 VARCHAR(255) NULL,
-  PRIMARY KEY(id),
-  INDEX Business_Data_FKIndex1(User_Role_Screen_Element_id),
-  INDEX Business_Data_FKIndex2(Business_Data_Reference_id)
-);
+-- -----------------------------------------------------
+-- Table `ims`.`transaction_type`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`transaction_type` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  PRIMARY KEY (`id`) );
 
-CREATE TABLE Business_Data_Reference (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  name VARCHAR NULL,
-  PRIMARY KEY(id)
-);
 
-CREATE TABLE Business_Fields (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY(id)
-);
+-- -----------------------------------------------------
+-- Table `ims`.`duration_type`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`duration_type` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  PRIMARY KEY (`id`) );
 
-CREATE TABLE Collection (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Collection_Mode_id INTEGER UNSIGNED NOT NULL,
-  Institute_Branch_Tenure_User_id INTEGER UNSIGNED NOT NULL,
-  Duration_Type_id INTEGER UNSIGNED NOT NULL,
-  Collection_Status_id INTEGER UNSIGNED NOT NULL,
-  Collection_Setup_Data_id INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(id),
-  INDEX Collection_FKIndex2(Collection_Setup_Data_id),
-  INDEX Collection_FKIndex4(Collection_Status_id),
-  INDEX Collection_FKIndex7(Duration_Type_id),
-  INDEX Collection_FKIndex6(Institute_Branch_Tenure_User_id),
-  INDEX Collection_FKIndex5(Collection_Mode_id)
-);
 
-CREATE TABLE Collection_Mode (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY(id)
-);
+-- -----------------------------------------------------
+-- Table `ims`.`collection_type`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`collection_type` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  PRIMARY KEY (`id`) );
 
-CREATE TABLE Collection_Reference (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY(id)
-);
 
-CREATE TABLE Collection_Setup_Data (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Collection_Reference_id INTEGER UNSIGNED NOT NULL,
-  Collection_Type_id INTEGER UNSIGNED NOT NULL,
-  Duration_Type_id INTEGER UNSIGNED NOT NULL,
-  collection_reference_field_id INTEGER UNSIGNED NULL,
-  start_date DATE NULL,
-  last_date DATE NULL,
-  amount INTEGER UNSIGNED NULL,
-  PRIMARY KEY(id),
-  INDEX Collection_Setup_Data_FKIndex1(Duration_Type_id),
-  INDEX Collection_Setup_Data_FKIndex2(Collection_Type_id),
-  INDEX Collection_Setup_Data_FKIndex3(Collection_Reference_id)
-);
+-- -----------------------------------------------------
+-- Table `ims`.`course`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`course` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  PRIMARY KEY (`id`) );
 
-CREATE TABLE Collection_Status (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY(id)
-);
 
-CREATE TABLE Collection_Type (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY(id)
-);
+-- -----------------------------------------------------
+-- Table `ims`.`role_type`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`role_type` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  PRIMARY KEY (`id`) );
 
-CREATE TABLE Course (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY(id)
-);
 
-CREATE TABLE Duration_Type (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY(id)
-);
+-- -----------------------------------------------------
+-- Table `ims`.`permission`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`permission` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  PRIMARY KEY (`id`) );
 
-CREATE TABLE Institute (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY(id)
-);
 
-CREATE TABLE Institute_Branch (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Institute_id INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(id),
-  INDEX Institution_Branch_FKIndex1(Institute_id)
-);
+-- -----------------------------------------------------
+-- Table `ims`.`module`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`module` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  PRIMARY KEY (`id`) );
 
-CREATE TABLE Institute_Branch_Academic_Program (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Institute_Branch_id INTEGER UNSIGNED NOT NULL,
-  Academic_Program_id INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(id),
-  INDEX Institute_Branch_Academic_Program_FKIndex1(Academic_Program_id),
-  INDEX Institute_Branch_Academic_Program_FKIndex2(Institute_Branch_id)
-);
 
-CREATE TABLE Institute_Branch_Module (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Module_id INTEGER UNSIGNED NOT NULL,
-  Institute_Branch_id INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(id),
-  INDEX Institute_Module_FKIndex1(Institute_Branch_id),
-  INDEX Institute_Module_FKIndex2(Module_id)
-);
+-- -----------------------------------------------------
+-- Table `ims`.`tenure`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`tenure` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  PRIMARY KEY (`id`) );
 
-CREATE TABLE Institute_Branch_Tenure (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Tenure_id INTEGER UNSIGNED NOT NULL,
-  Institute_Branch_id INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(id),
-  INDEX Institute_Branch_Tenure_FKIndex1(Institute_Branch_id),
-  INDEX Institute_Branch_Tenure_FKIndex2(Tenure_id)
-);
 
-CREATE TABLE Institute_Branch_Tenure_User (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Institute_Branch_Tenure_id INTEGER UNSIGNED NOT NULL,
-  Users_id INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(id),
-  INDEX Institute_User_FKIndex1(Users_id),
-  INDEX Institute_Branch_Tenure_User_FKIndex2(Institute_Branch_Tenure_id)
-);
+-- -----------------------------------------------------
+-- Table `ims`.`rule`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`rule` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  PRIMARY KEY (`id`) );
 
-CREATE TABLE Institute_Branch_User_Academic_Program (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Tenure_Academic_Program_Course_id INTEGER UNSIGNED NOT NULL,
-  Institute_Branch_Tenure_User_id INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(id),
-  INDEX Institute_Branch_User_Academic_Program_FKIndex1(Institute_Branch_Tenure_User_id),
-  INDEX Institute_Branch_User_Academic_Program_FKIndex2(Tenure_Academic_Program_Course_id)
-);
 
-CREATE TABLE Module (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY(id)
-);
+-- -----------------------------------------------------
+-- Table `ims`.`collection_status`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`collection_status` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  PRIMARY KEY (`id`) );
 
-CREATE TABLE Module_Screen (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Module_id INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(id),
-  INDEX Module_Screen_FKIndex1(Module_id)
-);
 
-CREATE TABLE Module_Screen_Element (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Business_Fields_id INTEGER UNSIGNED NOT NULL,
-  Module_Screen_id INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(id),
-  INDEX Module_Screen_Element_FKIndex1(Module_Screen_id),
-  INDEX Module_Screen_Element_FKIndex2(Business_Fields_id)
-);
+-- -----------------------------------------------------
+-- Table `ims`.`business_fields`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`business_fields` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  PRIMARY KEY (`id`) );
 
-CREATE TABLE Permission (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY(id)
-);
 
-CREATE TABLE Role (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Role_Type_id INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(id),
-  INDEX Role_FKIndex1(Role_Type_id)
-);
+-- -----------------------------------------------------
+-- Table `ims`.`academic`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`academic` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  PRIMARY KEY (`id`) );
 
-CREATE TABLE Role_Institute_Branch_Module (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Institute_Branch_Module_id INTEGER UNSIGNED NOT NULL,
-  Role_id INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(id),
-  INDEX Role_Institute_Branch_Module_FKIndex1(Role_id),
-  INDEX Role_Institute_Branch_Module_FKIndex2(Institute_Branch_Module_id)
-);
 
-CREATE TABLE Role_Type (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY(id)
-);
+-- -----------------------------------------------------
+-- Table `ims`.`business_data_reference`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`business_data_reference` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  `name` VARCHAR(255) NULL DEFAULT NULL ,
+  PRIMARY KEY (`id`) );
 
-CREATE TABLE Rule (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY(id)
-);
 
-CREATE TABLE Tenure (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY(id)
-);
+-- -----------------------------------------------------
+-- Table `ims`.`user`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`user` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  PRIMARY KEY (`id`) );
 
-CREATE TABLE Tenure_Academic_Program_Course (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Institute_Branch_Tenure_id INTEGER UNSIGNED NOT NULL,
-  Academic_Program_Course_id INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(id),
-  INDEX Tenure_Academic_Course_FKIndex2(Academic_Program_Course_id),
-  INDEX Tenure_Academic_Program_Course_FKIndex3(Institute_Branch_Tenure_id)
-);
 
-CREATE TABLE Transaction (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Transaction_Type_Detail_id INTEGER UNSIGNED NOT NULL,
-  Collection_id INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(id),
-  INDEX Transaction_FKIndex1(Collection_id),
-  INDEX Transaction_FKIndex2(Transaction_Type_Detail_id)
-);
+-- -----------------------------------------------------
+-- Table `ims`.`collection_reference`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`collection_reference` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  PRIMARY KEY (`id`) );
 
-CREATE TABLE Transaction_Type (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY(id)
-);
 
-CREATE TABLE Transaction_Type_Detail (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Transaction_Type_id INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(id),
-  INDEX Transaction_Type_Detail_FKIndex1(Transaction_Type_id)
-);
+-- -----------------------------------------------------
+-- Table `ims`.`collection_mode`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`collection_mode` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  PRIMARY KEY (`id`) );
 
-CREATE TABLE Users (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY(id)
-);
 
-CREATE TABLE User_Profile (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  User_Role_Screen_Element_id INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(id),
-  INDEX User_Profile_FKIndex2(User_Role_Screen_Element_id)
-);
+-- -----------------------------------------------------
+-- Table `ims`.`academic_program`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`academic_program` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  `academic_id` INTEGER NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `academic_program_fkindex2` (`academic_id` ASC) ,
+  CONSTRAINT `fk_11a9ac26-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`academic_id` )
+    REFERENCES `ims`.`academic` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
 
-CREATE TABLE User_Role_Institute_Branch_Module (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Role_Institute_Branch_Module_id INTEGER UNSIGNED NOT NULL,
-  Institute_Branch_Tenure_User_id INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(id),
-  INDEX User_Role_FKIndex1(Institute_Branch_Tenure_User_id),
-  INDEX User_Role_FKIndex2(Role_Institute_Branch_Module_id)
-);
 
-CREATE TABLE User_Role_Screen_Element (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Rule_id INTEGER UNSIGNED NOT NULL,
-  Permission_id INTEGER UNSIGNED NOT NULL,
-  Module_Screen_Element_id INTEGER UNSIGNED NOT NULL,
-  User_Role_Institute_Branch_Module_id INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(id),
-  INDEX User_Role_Screen_Element_FKIndex1(User_Role_Institute_Branch_Module_id),
-  INDEX User_Role_Screen_Element_FKIndex2(Module_Screen_Element_id),
-  INDEX User_Role_Screen_Element_FKIndex3(Permission_id),
-  INDEX User_Role_Screen_Element_FKIndex4(Rule_id)
-);
+-- -----------------------------------------------------
+-- Table `ims`.`module_screen`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`module_screen` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  `module_id` INTEGER NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `module_screen_fkindex1` (`module_id` ASC) ,
+  CONSTRAINT `fk_11a9cf94-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`module_id` )
+    REFERENCES `ims`.`module` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `ims`.`role`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`role` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  `role_type_id` INTEGER NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `role_fkindex1` (`role_type_id` ASC) ,
+  CONSTRAINT `fk_11a9e9c0-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`role_type_id` )
+    REFERENCES `ims`.`role_type` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `ims`.`institute_branch`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`institute_branch` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  `institute_id` INTEGER NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `institution_branch_fkindex1` (`institute_id` ASC) ,
+  CONSTRAINT `fk_11aa00ae-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`institute_id` )
+    REFERENCES `ims`.`institute` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `ims`.`transaction_type_detail`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`transaction_type_detail` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  `transaction_type_id` INTEGER NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `transaction_type_detail_fkindex1` (`transaction_type_id` ASC) ,
+  CONSTRAINT `fk_11aa179c-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`transaction_type_id` )
+    REFERENCES `ims`.`transaction_type` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `ims`.`institute_branch_academic_program`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`institute_branch_academic_program` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  `institute_branch_id` INTEGER NOT NULL ,
+  `academic_program_id` INTEGER NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `institute_branch_academic_program_fkindex1` (`academic_program_id` ASC) ,
+  INDEX `institute_branch_academic_program_fkindex2` (`institute_branch_id` ASC) ,
+  CONSTRAINT `fk_11aa352e-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`academic_program_id` )
+    REFERENCES `ims`.`academic_program` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_11aa3790-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`institute_branch_id` )
+    REFERENCES `ims`.`institute_branch` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `ims`.`institute_branch_module`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`institute_branch_module` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  `module_id` INTEGER NOT NULL ,
+  `institute_branch_id` INTEGER NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `institute_module_fkindex1` (`institute_branch_id` ASC) ,
+  INDEX `institute_module_fkindex2` (`module_id` ASC) ,
+  CONSTRAINT `fk_11aa5734-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`institute_branch_id` )
+    REFERENCES `ims`.`institute_branch` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_11aa59a0-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`module_id` )
+    REFERENCES `ims`.`module` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `ims`.`academic_program_course`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`academic_program_course` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  `academic_program_id` INTEGER NOT NULL ,
+  `course_id` INTEGER NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `academic_course_fkindex2` (`course_id` ASC) ,
+  INDEX `academic_program_course_fkindex2` (`academic_program_id` ASC) ,
+  CONSTRAINT `fk_11aa789a-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`course_id` )
+    REFERENCES `ims`.`course` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_11aa7afc-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`academic_program_id` )
+    REFERENCES `ims`.`academic_program` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `ims`.`module_screen_element`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`module_screen_element` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  `business_fields_id` INTEGER NOT NULL ,
+  `module_screen_id` INTEGER NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `module_screen_element_fkindex1` (`module_screen_id` ASC) ,
+  INDEX `module_screen_element_fkindex2` (`business_fields_id` ASC) ,
+  CONSTRAINT `fk_11aa9b90-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`module_screen_id` )
+    REFERENCES `ims`.`module_screen` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_11aa9df2-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`business_fields_id` )
+    REFERENCES `ims`.`business_fields` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `ims`.`institute_branch_tenure`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`institute_branch_tenure` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  `tenure_id` INTEGER NOT NULL ,
+  `institute_branch_id` INTEGER NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `institute_branch_tenure_fkindex1` (`institute_branch_id` ASC) ,
+  INDEX `institute_branch_tenure_fkindex2` (`tenure_id` ASC) ,
+  CONSTRAINT `fk_11aabd00-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`institute_branch_id` )
+    REFERENCES `ims`.`institute_branch` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_11aabf62-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`tenure_id` )
+    REFERENCES `ims`.`tenure` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `ims`.`institute_branch_tenure_user`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`institute_branch_tenure_user` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  `institute_branch_tenure_id` INTEGER NOT NULL ,
+  `user_id` INTEGER NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `institute_user_fkindex1` (`user_id` ASC) ,
+  INDEX `institute_branch_tenure_user_fkindex2` (`institute_branch_tenure_id` ASC) ,
+  CONSTRAINT `fk_11aade7a-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`user_id` )
+    REFERENCES `ims`.`user` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_11aae0dc-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`institute_branch_tenure_id` )
+    REFERENCES `ims`.`institute_branch_tenure` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `ims`.`collection_setup_data`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`collection_setup_data` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  `collection_reference_id` INTEGER NOT NULL ,
+  `collection_type_id` INTEGER NOT NULL ,
+  `duration_type_id` INTEGER NOT NULL ,
+  `collection_reference_field_id` INTEGER DEFAULT NULL ,
+  `start_date` DATE NULL DEFAULT NULL ,
+  `last_date` DATE NULL DEFAULT NULL ,
+  `amount` INTEGER DEFAULT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `collection_setup_data_fkindex1` (`duration_type_id` ASC) ,
+  INDEX `collection_setup_data_fkindex2` (`collection_type_id` ASC) ,
+  INDEX `collection_setup_data_fkindex3` (`collection_reference_id` ASC) ,
+  CONSTRAINT `fk_11ab0dfa-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`duration_type_id` )
+    REFERENCES `ims`.`duration_type` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_11ab1066-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`collection_type_id` )
+    REFERENCES `ims`.`collection_type` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_11ab12c8-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`collection_reference_id` )
+    REFERENCES `ims`.`collection_reference` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `ims`.`collection`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`collection` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  `collection_mode_id` INTEGER NOT NULL ,
+  `institute_branch_tenure_user_id` INTEGER NOT NULL ,
+  `duration_type_id` INTEGER NOT NULL ,
+  `collection_status_id` INTEGER NOT NULL ,
+  `collection_setup_data_id` INTEGER NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `collection_fkindex2` (`collection_setup_data_id` ASC) ,
+  INDEX `collection_fkindex4` (`collection_status_id` ASC) ,
+  INDEX `collection_fkindex42` (`duration_type_id` ASC) ,
+  INDEX `collection_fkindex43` (`institute_branch_tenure_user_id` ASC) ,
+  INDEX `collection_fkindex5` (`collection_mode_id` ASC) ,
+  CONSTRAINT `fk_11ab4702-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`collection_setup_data_id` )
+    REFERENCES `ims`.`collection_setup_data` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_11ab4978-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`collection_status_id` )
+    REFERENCES `ims`.`collection_status` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_11ab4be4-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`duration_type_id` )
+    REFERENCES `ims`.`duration_type` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_11ab4e50-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`institute_branch_tenure_user_id` )
+    REFERENCES `ims`.`institute_branch_tenure_user` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_11ab50a8-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`collection_mode_id` )
+    REFERENCES `ims`.`collection_mode` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `ims`.`transaction`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`transaction` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  `transaction_type_detail_id` INTEGER NOT NULL ,
+  `collection_id` INTEGER NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `transaction_fkindex1` (`collection_id` ASC) ,
+  INDEX `transaction_fkindex2` (`transaction_type_detail_id` ASC) ,
+  CONSTRAINT `fk_11ab7416-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`collection_id` )
+    REFERENCES `ims`.`collection` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_11ab7678-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`transaction_type_detail_id` )
+    REFERENCES `ims`.`transaction_type_detail` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `ims`.`tenure_academic_program_course`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`tenure_academic_program_course` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  `institute_branch_tenure_id` INTEGER NOT NULL ,
+  `academic_program_course_id` INTEGER NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `tenure_academic_course_fkindex2` (`academic_program_course_id` ASC) ,
+  INDEX `tenure_academic_program_course_fkindex3` (`institute_branch_tenure_id` ASC) ,
+  CONSTRAINT `fk_11ab973e-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`academic_program_course_id` )
+    REFERENCES `ims`.`academic_program_course` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_11ab99aa-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`institute_branch_tenure_id` )
+    REFERENCES `ims`.`institute_branch_tenure` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `ims`.`role_institute_branch_module`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`role_institute_branch_module` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  `institute_branch_module_id` INTEGER NOT NULL ,
+  `role_id` INTEGER NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `role_institute_branch_module_fkindex1` (`role_id` ASC) ,
+  INDEX `role_institute_branch_module_fkindex2` (`institute_branch_module_id` ASC) ,
+  CONSTRAINT `fk_11abb8ea-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`role_id` )
+    REFERENCES `ims`.`role` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_11abbb4c-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`institute_branch_module_id` )
+    REFERENCES `ims`.`institute_branch_module` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `ims`.`institute_branch_user_academic_program`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`institute_branch_user_academic_program` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  `tenure_academic_program_course_id` INTEGER NOT NULL ,
+  `institute_branch_tenure_user_id` INTEGER NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `institute_branch_user_academic_program_fkindex1` (`institute_branch_tenure_user_id` ASC) ,
+  INDEX `institute_branch_user_academic_program_fkindex2` (`tenure_academic_program_course_id` ASC) ,
+  CONSTRAINT `fk_11abdb04-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`institute_branch_tenure_user_id` )
+    REFERENCES `ims`.`institute_branch_tenure_user` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_11abdd66-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`tenure_academic_program_course_id` )
+    REFERENCES `ims`.`tenure_academic_program_course` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `ims`.`user_role_institute_branch_module`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`user_role_institute_branch_module` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  `role_institute_branch_module_id` INTEGER NOT NULL ,
+  `institute_branch_tenure_user_id` INTEGER NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `user_role_fkindex1` (`institute_branch_tenure_user_id` ASC) ,
+  INDEX `user_role_fkindex2` (`role_institute_branch_module_id` ASC) ,
+  CONSTRAINT `fk_11abfcd8-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`institute_branch_tenure_user_id` )
+    REFERENCES `ims`.`institute_branch_tenure_user` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_11abff3a-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`role_institute_branch_module_id` )
+    REFERENCES `ims`.`role_institute_branch_module` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `ims`.`user_role_screen_element`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`user_role_screen_element` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  `rule_id` INTEGER NOT NULL ,
+  `permission_id` INTEGER NOT NULL ,
+  `module_screen_element_id` INTEGER NOT NULL ,
+  `user_role_institute_branch_module_id` INTEGER NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `user_role_screen_element_fkindex1` (`user_role_institute_branch_module_id` ASC) ,
+  INDEX `user_role_screen_element_fkindex2` (`module_screen_element_id` ASC) ,
+  INDEX `user_role_screen_element_fkindex3` (`permission_id` ASC) ,
+  INDEX `user_role_screen_element_fkindex4` (`rule_id` ASC) ,
+  CONSTRAINT `fk_11ac2cd0-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`user_role_institute_branch_module_id` )
+    REFERENCES `ims`.`user_role_institute_branch_module` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_11ac2f3c-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`module_screen_element_id` )
+    REFERENCES `ims`.`module_screen_element` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_11ac3194-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`permission_id` )
+    REFERENCES `ims`.`permission` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_11ac33e2-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`rule_id` )
+    REFERENCES `ims`.`rule` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `ims`.`user_profile`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`user_profile` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  `user_role_screen_element_id` INTEGER NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `user_profile_fkindex2` (`user_role_screen_element_id` ASC) ,
+  CONSTRAINT `fk_11ac4f4e-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`user_role_screen_element_id` )
+    REFERENCES `ims`.`user_role_screen_element` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `ims`.`business_data`
+-- -----------------------------------------------------
+CREATE  TABLE  `ims`.`business_data` (
+   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `created_date` DATETIME DEFAULT NULL,
+  `created_by` INTEGER DEFAULT NULL,
+  `last_updated_date` DATETIME DEFAULT NULL,
+  `last_updated_by` INTEGER DEFAULT NULL,
+  `status` VARCHAR(5) DEFAULT NULL ,
+  `business_data_reference_id` INTEGER NOT NULL ,
+  `user_role_screen_element_id` INTEGER NOT NULL ,
+  `value` VARCHAR(255) NULL DEFAULT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `business_data_fkindex1` (`user_role_screen_element_id` ASC) ,
+  INDEX `business_data_fkindex2` (`business_data_reference_id` ASC) ,
+  CONSTRAINT `fk_11ac6fba-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`user_role_screen_element_id` )
+    REFERENCES `ims`.`user_role_screen_element` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_11ac721c-f436-11e1-ada0-00270e043a85`
+    FOREIGN KEY (`business_data_reference_id` )
+    REFERENCES `ims`.`business_data_reference` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
 
 
