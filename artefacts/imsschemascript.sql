@@ -3,11 +3,11 @@
 -- Table `ims`.`institute`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`institute` (
-  `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL,
 PRIMARY KEY (`id`) );
 
@@ -16,11 +16,11 @@ PRIMARY KEY (`id`) );
 -- Table `ims`.`transaction_type`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`transaction_type` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
   PRIMARY KEY (`id`) );
 
@@ -29,11 +29,11 @@ CREATE  TABLE  `ims`.`transaction_type` (
 -- Table `ims`.`duration_type`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`duration_type` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
   PRIMARY KEY (`id`) );
 
@@ -42,11 +42,11 @@ CREATE  TABLE  `ims`.`duration_type` (
 -- Table `ims`.`collection_type`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`collection_type` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
   PRIMARY KEY (`id`) );
 
@@ -55,11 +55,11 @@ CREATE  TABLE  `ims`.`collection_type` (
 -- Table `ims`.`course`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`course` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
   PRIMARY KEY (`id`) );
 
@@ -68,11 +68,11 @@ CREATE  TABLE  `ims`.`course` (
 -- Table `ims`.`role_type`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`role_type` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
   PRIMARY KEY (`id`) );
 
@@ -81,11 +81,11 @@ CREATE  TABLE  `ims`.`role_type` (
 -- Table `ims`.`permission`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`permission` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
   PRIMARY KEY (`id`) );
 
@@ -94,11 +94,11 @@ CREATE  TABLE  `ims`.`permission` (
 -- Table `ims`.`module`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`module` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
   PRIMARY KEY (`id`) );
 
@@ -107,11 +107,11 @@ CREATE  TABLE  `ims`.`module` (
 -- Table `ims`.`tenure`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`tenure` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
   PRIMARY KEY (`id`) );
 
@@ -120,11 +120,11 @@ CREATE  TABLE  `ims`.`tenure` (
 -- Table `ims`.`rule`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`rule` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
   PRIMARY KEY (`id`) );
 
@@ -133,11 +133,11 @@ CREATE  TABLE  `ims`.`rule` (
 -- Table `ims`.`collection_status`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`collection_status` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
   PRIMARY KEY (`id`) );
 
@@ -146,11 +146,11 @@ CREATE  TABLE  `ims`.`collection_status` (
 -- Table `ims`.`business_fields`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`business_fields` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
   PRIMARY KEY (`id`) );
 
@@ -159,11 +159,11 @@ CREATE  TABLE  `ims`.`business_fields` (
 -- Table `ims`.`academic`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`academic` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
   PRIMARY KEY (`id`) );
 
@@ -172,11 +172,11 @@ CREATE  TABLE  `ims`.`academic` (
 -- Table `ims`.`business_data_reference`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`business_data_reference` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
   `name` VARCHAR(255) NULL DEFAULT NULL ,
   PRIMARY KEY (`id`) );
@@ -186,11 +186,11 @@ CREATE  TABLE  `ims`.`business_data_reference` (
 -- Table `ims`.`user`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`user` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
   PRIMARY KEY (`id`) );
 
@@ -199,11 +199,11 @@ CREATE  TABLE  `ims`.`user` (
 -- Table `ims`.`collection_reference`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`collection_reference` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
   PRIMARY KEY (`id`) );
 
@@ -212,11 +212,11 @@ CREATE  TABLE  `ims`.`collection_reference` (
 -- Table `ims`.`collection_mode`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`collection_mode` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
   PRIMARY KEY (`id`) );
 
@@ -225,13 +225,13 @@ CREATE  TABLE  `ims`.`collection_mode` (
 -- Table `ims`.`academic_program`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`academic_program` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
-  `academic_id` INTEGER NOT NULL ,
+  `academic_id` BIGINT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `academic_program_fkindex2` (`academic_id` ASC) ,
   CONSTRAINT `fk_11a9ac26-f436-11e1-ada0-00270e043a85`
@@ -245,13 +245,13 @@ CREATE  TABLE  `ims`.`academic_program` (
 -- Table `ims`.`module_screen`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`module_screen` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
-  `module_id` INTEGER NOT NULL ,
+  `module_id` BIGINT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `module_screen_fkindex1` (`module_id` ASC) ,
   CONSTRAINT `fk_11a9cf94-f436-11e1-ada0-00270e043a85`
@@ -265,13 +265,13 @@ CREATE  TABLE  `ims`.`module_screen` (
 -- Table `ims`.`role`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`role` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
-  `role_type_id` INTEGER NOT NULL ,
+  `role_type_id` BIGINT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `role_fkindex1` (`role_type_id` ASC) ,
   CONSTRAINT `fk_11a9e9c0-f436-11e1-ada0-00270e043a85`
@@ -285,13 +285,13 @@ CREATE  TABLE  `ims`.`role` (
 -- Table `ims`.`institute_branch`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`institute_branch` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
-  `institute_id` INTEGER NOT NULL ,
+  `institute_id` BIGINT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `institution_branch_fkindex1` (`institute_id` ASC) ,
   CONSTRAINT `fk_11aa00ae-f436-11e1-ada0-00270e043a85`
@@ -305,13 +305,13 @@ CREATE  TABLE  `ims`.`institute_branch` (
 -- Table `ims`.`transaction_type_detail`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`transaction_type_detail` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
-  `transaction_type_id` INTEGER NOT NULL ,
+  `transaction_type_id` BIGINT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `transaction_type_detail_fkindex1` (`transaction_type_id` ASC) ,
   CONSTRAINT `fk_11aa179c-f436-11e1-ada0-00270e043a85`
@@ -325,14 +325,14 @@ CREATE  TABLE  `ims`.`transaction_type_detail` (
 -- Table `ims`.`institute_branch_academic_program`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`institute_branch_academic_program` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
-  `institute_branch_id` INTEGER NOT NULL ,
-  `academic_program_id` INTEGER NOT NULL ,
+  `institute_branch_id` BIGINT NOT NULL ,
+  `academic_program_id` BIGINT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `institute_branch_academic_program_fkindex1` (`academic_program_id` ASC) ,
   INDEX `institute_branch_academic_program_fkindex2` (`institute_branch_id` ASC) ,
@@ -352,14 +352,14 @@ CREATE  TABLE  `ims`.`institute_branch_academic_program` (
 -- Table `ims`.`institute_branch_module`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`institute_branch_module` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
-  `module_id` INTEGER NOT NULL ,
-  `institute_branch_id` INTEGER NOT NULL ,
+  `module_id` BIGINT NOT NULL ,
+  `institute_branch_id` BIGINT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `institute_module_fkindex1` (`institute_branch_id` ASC) ,
   INDEX `institute_module_fkindex2` (`module_id` ASC) ,
@@ -379,14 +379,14 @@ CREATE  TABLE  `ims`.`institute_branch_module` (
 -- Table `ims`.`academic_program_course`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`academic_program_course` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
-  `academic_program_id` INTEGER NOT NULL ,
-  `course_id` INTEGER NOT NULL ,
+  `academic_program_id` BIGINT NOT NULL ,
+  `course_id` BIGINT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `academic_course_fkindex2` (`course_id` ASC) ,
   INDEX `academic_program_course_fkindex2` (`academic_program_id` ASC) ,
@@ -406,14 +406,14 @@ CREATE  TABLE  `ims`.`academic_program_course` (
 -- Table `ims`.`module_screen_element`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`module_screen_element` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
-  `business_fields_id` INTEGER NOT NULL ,
-  `module_screen_id` INTEGER NOT NULL ,
+  `business_fields_id` BIGINT NOT NULL ,
+  `module_screen_id` BIGINT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `module_screen_element_fkindex1` (`module_screen_id` ASC) ,
   INDEX `module_screen_element_fkindex2` (`business_fields_id` ASC) ,
@@ -433,14 +433,14 @@ CREATE  TABLE  `ims`.`module_screen_element` (
 -- Table `ims`.`institute_branch_tenure`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`institute_branch_tenure` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
-  `tenure_id` INTEGER NOT NULL ,
-  `institute_branch_id` INTEGER NOT NULL ,
+  `tenure_id` BIGINT NOT NULL ,
+  `institute_branch_id` BIGINT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `institute_branch_tenure_fkindex1` (`institute_branch_id` ASC) ,
   INDEX `institute_branch_tenure_fkindex2` (`tenure_id` ASC) ,
@@ -460,14 +460,14 @@ CREATE  TABLE  `ims`.`institute_branch_tenure` (
 -- Table `ims`.`institute_branch_tenure_user`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`institute_branch_tenure_user` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
-  `institute_branch_tenure_id` INTEGER NOT NULL ,
-  `user_id` INTEGER NOT NULL ,
+  `institute_branch_tenure_id` BIGINT NOT NULL ,
+  `user_id` BIGINT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `institute_user_fkindex1` (`user_id` ASC) ,
   INDEX `institute_branch_tenure_user_fkindex2` (`institute_branch_tenure_id` ASC) ,
@@ -487,19 +487,19 @@ CREATE  TABLE  `ims`.`institute_branch_tenure_user` (
 -- Table `ims`.`collection_setup_data`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`collection_setup_data` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
-  `collection_reference_id` INTEGER NOT NULL ,
-  `collection_type_id` INTEGER NOT NULL ,
-  `duration_type_id` INTEGER NOT NULL ,
-  `collection_reference_field_id` INTEGER DEFAULT NULL ,
+  `collection_reference_id` BIGINT NOT NULL ,
+  `collection_type_id` BIGINT NOT NULL ,
+  `duration_type_id` BIGINT NOT NULL ,
+  `collection_reference_field_id` BIGINT DEFAULT NULL ,
   `start_date` DATE NULL DEFAULT NULL ,
   `last_date` DATE NULL DEFAULT NULL ,
-  `amount` INTEGER DEFAULT NULL ,
+  `amount` BIGINT DEFAULT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `collection_setup_data_fkindex1` (`duration_type_id` ASC) ,
   INDEX `collection_setup_data_fkindex2` (`collection_type_id` ASC) ,
@@ -525,17 +525,17 @@ CREATE  TABLE  `ims`.`collection_setup_data` (
 -- Table `ims`.`collection`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`collection` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
-  `collection_mode_id` INTEGER NOT NULL ,
-  `institute_branch_tenure_user_id` INTEGER NOT NULL ,
-  `duration_type_id` INTEGER NOT NULL ,
-  `collection_status_id` INTEGER NOT NULL ,
-  `collection_setup_data_id` INTEGER NOT NULL ,
+  `collection_mode_id` BIGINT NOT NULL ,
+  `institute_branch_tenure_user_id` BIGINT NOT NULL ,
+  `duration_type_id` BIGINT NOT NULL ,
+  `collection_status_id` BIGINT NOT NULL ,
+  `collection_setup_data_id` BIGINT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `collection_fkindex2` (`collection_setup_data_id` ASC) ,
   INDEX `collection_fkindex4` (`collection_status_id` ASC) ,
@@ -573,14 +573,14 @@ CREATE  TABLE  `ims`.`collection` (
 -- Table `ims`.`transaction`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`transaction` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
-  `transaction_type_detail_id` INTEGER NOT NULL ,
-  `collection_id` INTEGER NOT NULL ,
+  `transaction_type_detail_id` BIGINT NOT NULL ,
+  `collection_id` BIGINT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `transaction_fkindex1` (`collection_id` ASC) ,
   INDEX `transaction_fkindex2` (`transaction_type_detail_id` ASC) ,
@@ -600,14 +600,14 @@ CREATE  TABLE  `ims`.`transaction` (
 -- Table `ims`.`tenure_academic_program_course`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`tenure_academic_program_course` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
-  `institute_branch_tenure_id` INTEGER NOT NULL ,
-  `academic_program_course_id` INTEGER NOT NULL ,
+  `institute_branch_tenure_id` BIGINT NOT NULL ,
+  `academic_program_course_id` BIGINT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `tenure_academic_course_fkindex2` (`academic_program_course_id` ASC) ,
   INDEX `tenure_academic_program_course_fkindex3` (`institute_branch_tenure_id` ASC) ,
@@ -627,14 +627,14 @@ CREATE  TABLE  `ims`.`tenure_academic_program_course` (
 -- Table `ims`.`role_institute_branch_module`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`role_institute_branch_module` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
-  `institute_branch_module_id` INTEGER NOT NULL ,
-  `role_id` INTEGER NOT NULL ,
+  `institute_branch_module_id` BIGINT NOT NULL ,
+  `role_id` BIGINT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `role_institute_branch_module_fkindex1` (`role_id` ASC) ,
   INDEX `role_institute_branch_module_fkindex2` (`institute_branch_module_id` ASC) ,
@@ -654,14 +654,14 @@ CREATE  TABLE  `ims`.`role_institute_branch_module` (
 -- Table `ims`.`institute_branch_user_academic_program`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`institute_branch_user_academic_program` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
-  `tenure_academic_program_course_id` INTEGER NOT NULL ,
-  `institute_branch_tenure_user_id` INTEGER NOT NULL ,
+  `tenure_academic_program_course_id` BIGINT NOT NULL ,
+  `institute_branch_tenure_user_id` BIGINT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `institute_branch_user_academic_program_fkindex1` (`institute_branch_tenure_user_id` ASC) ,
   INDEX `institute_branch_user_academic_program_fkindex2` (`tenure_academic_program_course_id` ASC) ,
@@ -681,14 +681,14 @@ CREATE  TABLE  `ims`.`institute_branch_user_academic_program` (
 -- Table `ims`.`user_role_institute_branch_module`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`user_role_institute_branch_module` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
-  `role_institute_branch_module_id` INTEGER NOT NULL ,
-  `institute_branch_tenure_user_id` INTEGER NOT NULL ,
+  `role_institute_branch_module_id` BIGINT NOT NULL ,
+  `institute_branch_tenure_user_id` BIGINT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `user_role_fkindex1` (`institute_branch_tenure_user_id` ASC) ,
   INDEX `user_role_fkindex2` (`role_institute_branch_module_id` ASC) ,
@@ -708,16 +708,16 @@ CREATE  TABLE  `ims`.`user_role_institute_branch_module` (
 -- Table `ims`.`user_role_screen_element`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`user_role_screen_element` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
-  `rule_id` INTEGER NOT NULL ,
-  `permission_id` INTEGER NOT NULL ,
-  `module_screen_element_id` INTEGER NOT NULL ,
-  `user_role_institute_branch_module_id` INTEGER NOT NULL ,
+  `rule_id` BIGINT NOT NULL ,
+  `permission_id` BIGINT NOT NULL ,
+  `module_screen_element_id` BIGINT NOT NULL ,
+  `user_role_institute_branch_module_id` BIGINT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `user_role_screen_element_fkindex1` (`user_role_institute_branch_module_id` ASC) ,
   INDEX `user_role_screen_element_fkindex2` (`module_screen_element_id` ASC) ,
@@ -749,13 +749,13 @@ CREATE  TABLE  `ims`.`user_role_screen_element` (
 -- Table `ims`.`user_profile`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`user_profile` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
-  `user_role_screen_element_id` INTEGER NOT NULL ,
+  `user_role_screen_element_id` BIGINT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `user_profile_fkindex2` (`user_role_screen_element_id` ASC) ,
   CONSTRAINT `fk_11ac4f4e-f436-11e1-ada0-00270e043a85`
@@ -769,14 +769,14 @@ CREATE  TABLE  `ims`.`user_profile` (
 -- Table `ims`.`business_data`
 -- -----------------------------------------------------
 CREATE  TABLE  `ims`.`business_data` (
-   `id` INTEGER NOT NULL AUTO_INCREMENT ,
+   `id` BIGINT NOT NULL AUTO_INCREMENT ,
   `created_date` DATETIME DEFAULT NULL,
-  `created_by` INTEGER DEFAULT NULL,
+  `created_by` BIGINT DEFAULT NULL,
   `last_updated_date` DATETIME DEFAULT NULL,
-  `last_updated_by` INTEGER DEFAULT NULL,
+  `last_updated_by` BIGINT DEFAULT NULL,
   `status` VARCHAR(5) DEFAULT NULL ,
-  `business_data_reference_id` INTEGER NOT NULL ,
-  `user_role_screen_element_id` INTEGER NOT NULL ,
+  `business_data_reference_id` BIGINT NOT NULL ,
+  `user_role_screen_element_id` BIGINT NOT NULL ,
   `value` VARCHAR(255) NULL DEFAULT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `business_data_fkindex1` (`user_role_screen_element_id` ASC) ,
