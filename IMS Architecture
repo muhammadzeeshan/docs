@@ -3,15 +3,25 @@ symbol		definination
 --------------------------------------------------------------------------------------------------------------------
 
 C		[business model, DAL-bean, DAL-hbm,resource bundle,spring config, test cases, config props etc..] 
+(n)		[ Priority of task]
+#		[ Independent task. eg (1#) - independent task]
+*		[ Dependent task. eg (1*) - depends on 1 ]
 --------------------------------------------------------------------------------------------------------------------
 
 
 Project
 	Module(Business Layer [eclipse projects] )
 		Secutiry	(.jar)	[C] 
+			Role Management			(1-)
+			Module & Screen Management	(1-)
+			Permission Management		(1-)
+			User Management 		(1,2*)
+
 		Collection	(.jar)	[C] 
 		Academics	(.jar)	[C] 
 		Core		(.jar)	[C]  
+			Institute Management		(2-)
+
 		DAL		(.jar)	(hibernate[connection settings, caching settings etc..])
 		Utility		(.jar)
 		WS Caller	(.jar)
@@ -38,6 +48,7 @@ Project Infrastructure
 		-Spring Framework 3
 		-Hibernate 3
 		-JSP/Velocity
+		-Tiles
 		-JQuery
 		-JDK7
 
